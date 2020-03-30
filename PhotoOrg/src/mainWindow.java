@@ -222,8 +222,10 @@ public class mainWindow {
 				if (chckbxBackupOption.isSelected()) {
 					JOptionPane.showMessageDialog(frame, "Selecting this will NOT create a Backup of the Images");
 					btnBackup.setEnabled(false);
-				} else
+				} else {
 					btnBackup.setEnabled(true);
+				}
+					
 			}
 		});
 
