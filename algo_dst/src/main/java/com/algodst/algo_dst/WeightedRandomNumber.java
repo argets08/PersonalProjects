@@ -1,24 +1,23 @@
-package Random;
+package com.algodst.algo_dst;
 
 public class WeightedRandomNumber {
 
-	private Country[] countryArray = new Country[10];
+	private final Country[] countryArray = new Country[10];
 	private int randomWt;
 
 	public int populate() {
 		for (int i = 0; i < 10; i++) {
 			randomWt = (int) (Math.random() * 100 + 1);
-			Country c = new Country("C" + i, randomWt);
+			final Country c = new Country("C" + i, randomWt);
 			countryArray[i] = c;
 		}
 		return 1;
 	}
-	
 
 	public int populateStatic() {
 		for (int i = 0; i < 10; i++) {
-			randomWt = i*13;
-			Country c = new Country("C" + i, randomWt);
+			randomWt = i * 13;
+			final Country c = new Country("C" + i, randomWt);
 			countryArray[i] = c;
 		}
 		return 1;
